@@ -1,0 +1,22 @@
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.*
+
+# Backend
+backend/venv/
+backend/__pycache__/
+backend/.pytest_cache/
+backend/.env
+backend/.env.*
+
+# Python
+*.py[cod]
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
