@@ -1,43 +1,44 @@
 # AI-Powered Environmental Intelligence System
 
-An AI-powered environmental intelligence platform for air quality
-prediction and smart mobility recommendations.
+An AI-powered environmental intelligence platform for real-time air quality monitoring, weather & traffic correlation, interactive pollution mapping, and historical time-series telemetry.
 
 ## Tech Stack
 
-### Frontend
-- React
-- TypeScript
-- Vite
-- PWA
-- Leaflet.js
+- **Frontend:** React 19, TypeScript, Vite, Tailwind CSS, Leaflet (`react-leaflet`)
+- **Backend:** Python 3.12, FastAPI, HTTPX, Pydantic
+- **Database:** InfluxDB v2 (Time-Series Database via Docker)
+- **Data Sources:** OpenWeatherMap (Air Pollution, Weather, Geocoding), WAQI, OpenAQ v3, TomTom Traffic Flow, OpenStreetMap Nominatim
 
-### Backend
-- Python
-- FastAPI
+## Quickstart
 
-### Database
-- InfluxDB
+### 1. Start InfluxDB
+```cmd
+docker compose up -d
+```
 
-### AI/ML
-- TensorFlow
+### 2. Start Backend API
+```cmd
+cd backend
+venv\Scripts\activate
+uvicorn main:app --reload --port 8000
+```
+API Swagger Docs: `http://localhost:8000/docs`
 
-### Data Sources
-- OpenAQ
-- WAQI
-- OpenWeatherMap
+### 3. Start Frontend Dashboard
+```cmd
+cd frontend
+npm install
+npm run dev
+```
+Dashboard URL: `http://localhost:5173`
 
-### Tools
-- VS Code
-- Git
-- Docker
-- Postman
-- GitHub
+### 4. Run Tests & Database Verification
+```cmd
+cd backend
+venv\Scripts\pytest.exe -v
+venv\Scripts\python.exe verify_database.py
+```
 
-## Project Structure
-
-```text
-frontend/   → React application
-backend/    → FastAPI application
-docker/     → Docker configuration
-docs/       → Project documentation
+## Documentation
+- [Technical Documentation](docs/TECHNICAL_DOCUMENTATION.md) — Architecture, Setup, API Reference, DB Schema & Limitations
+- [Milestone 1 Final Submission](docs/MILESTONE_1_SUBMISSION.md) — Completed Checklist, Test Evidence & Milestone 2 Roadmap
