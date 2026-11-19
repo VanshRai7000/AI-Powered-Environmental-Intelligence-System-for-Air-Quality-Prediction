@@ -38,7 +38,3 @@ cd backend
 venv\Scripts\pytest.exe -v
 venv\Scripts\python.exe verify_database.py
 ```
-
-## Documentation
-- [Technical Documentation](docs/TECHNICAL_DOCUMENTATION.md) — Architecture, Setup, API Reference, DB Schema & Limitations
-- [Milestone 1 Final Submission](docs/MILESTONE_1_SUBMISSION.md) — Completed Checklist, Test Evidence & Milestone 2 Roadmap
